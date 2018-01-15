@@ -1,7 +1,7 @@
 $(function () {
 
     $('#my-menu').mmenu({
-        extensions: ['position-right', 'widescreen', 'theme-black', 'effect-menu-slide', 'pagedim-black'],
+        extensions: ['position-right', 'theme-black', 'effect-menu-slide', 'pagedim-black'],
         navbar: {
             title: '<img src="img/logo-1.svg" alt="Салон красоты">'
         }
@@ -12,7 +12,7 @@ $(function () {
 
 
 
-    API.bind( "open:start", function() {
+    API.bind( "open:finish", function() {
 
             $('.hamburger').addClass('is-active')
        ;
