@@ -278,6 +278,107 @@ html.mm-wrapper_opened
     &:hover
       background-color: rgba(#fff, .4)
 
+
+
+/*$CONTENT*/
+
+
+/*$S-SERVICES*/
+
+$colors: $blue, $red, $accent
+@for $i from 1 through  length($colors)
+   .carousel-services .owl-item:nth-child(#{length($colors)}n+#{$i})
+     background-color: nth($colors, $i)
+
+
+.owl-carousel
+  .owl-item
+    backface-visibility: inherit
+
+.carousel-services
+  background-color: $dark
+
+
+  &-content
+    position: relative
+    padding: 60px 10%
+
+  &-composition
+    margin: auto
+    text-align: center
+    width: 100%
+    .h3
+      text-transform: uppercase
+      font-weight: 800
+      font-size: 28px
+      margin-top: 5px
+      margin-bottom: 20px
+      span
+        font-weight: 300
+        font-size: 18px
+        display: block
+  &-list
+    margin: 0
+    padding: 0
+    list-style-type: none
+    margin-bottom: 25px
+    li
+      padding: 9px
+      border-bottom: 1px solid rgba(#000, .12)
+      &:last-child
+        border: none
+      strong
+        font-family: fira-sans, sans-serif
+        color: #4a4a4a
+      .fa
+        font-size: 14px
+
+  &-item
+    color: #fff
+    font-size: 18px
+    font-weight: 300
+    position: relative
+    display: flex
+    flex-direction: column-reverse
+    &:hover
+      .carousel-services-image
+        opacity: 1
+    .carousel-logo
+      text-align: center
+      img
+        width: 100px
+        height: auto
+        display: inline-block
+
+  .owl-nav
+    position: absolute
+    top: 0
+    width: 100%
+    >div
+      width: 64px
+      height: 64px
+      background-color: #ffffff
+      color: $dark
+      position: absolute
+      text-align: center
+      line-height: 64px
+      font-size: 26px
+      &.owl-prev
+        left: 0
+      &.owl-next
+        right: 0
+  .owl-item
+    &:nth-child(2n+2)
+      .carousel-services-item
+        flex-direction: column
+
+  &-image
+    -webkit-background-size:
+    background-size: cover
+    background-position: center
+    opacity: .75
+    transition: opacity .5s ease
+
 /*$COMPONENTS*/
 .button
   display: inline-block
@@ -321,6 +422,21 @@ html.mm-wrapper_opened
       opacity: .32
 
 
+.button-white
+  color: #aaaaaa
+  background-color: #fff
+  &::after
+    background-color: rgba(#000, .6)
+  &:hover
+    background-color: #fff
+    color: #aaaaaa
+    &::after
+      background-color: rgba(#000, .2)
+  &:active
+    color: #aaaaaa
+    background-color: #fff
+    &::after
+      background-color: rgba(#000, .4)
 
 @import "media"
 // Всегда в конце
